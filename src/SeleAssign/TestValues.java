@@ -22,7 +22,7 @@ public class TestValues {
 		private static ObjFactory objFactory;
 		private static Actions builder;
 		private WebDriverWait wait = new WebDriverWait(driver, 10);	
-		private static String chromeDriverPath = "C:\\Users\\salvi\\workspace\\BuildSeleAssign\\chromedriver.exe";
+		private static String chromeDriverPath = "./chromedriver.exe";
 		
 		@Test				
 		public void checkForTotalAmt() throws Exception {	

@@ -1,8 +1,5 @@
 package PageFactory;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -146,22 +143,5 @@ public class ObjFactory {
 
     }
 
-    public void addTOCart(){
-    	
-    	for(int i = 0; i < 5; i++)
-		{
-			Boolean temp = driver.findElements(By.xpath("//*[@id='page-content']/div[1]/div[1]/div[1]/div[2]/div/a")).size() > 0;			
-			if (temp)
-				break;
-			else
-			{	
-				/*builder.moveToElement(obj.addTOCart)))
-				.doubleClick().perform();*/
-				driver.findElement(By.xpath("//*[@id='add-to-cart-wrap' and @class='add-to-cart-btn']")).click();
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			}
-		}
-    	
-    }
-
+    
 }

@@ -45,7 +45,6 @@ public class TestValues {
 			addSecondProduct("Cashmere Kohler K66266U");//Add Second Product to cart with Quantity 1
 			
 			addThirdProduct("Kohler K-5180-ST","2");//Add Third Product to cart with Quantity 2
-			//wait.until(ExpectedConditions.elementToBeClickable(objFactory.checkoutButton));
 			
 			objFactory.checkoutButton.click();//Checkout The Cart
 			wait.until(ExpectedConditions.elementToBeClickable(objFactory.guestcheckoutButton));
@@ -58,19 +57,19 @@ public class TestValues {
 					"12", "2021", "Aditya Salvi", "123");//Enter The Payment Info
 			
 			try{
-				String prod1 = (objFactory.productValue1).getText().replaceAll("[$, ]", ""); //Get First Product Price		
-				String prod2 = (objFactory.productValue2).getText().replaceAll("[$, ]", ""); //Get Second Product Price	
-				String prod3 = (objFactory.productValue3).getText().replaceAll("[$, ]", ""); //Get Third Product Price								
-				String taxAmount = objFactory.taxAmount.getText().replaceAll("[$, ]", ""); //Get the Calculated Tax Amount
+				String prod1 		= (objFactory.productValue1).getText().replaceAll("[$, ]", ""); //Get First Product Price		
+				String prod2 		= (objFactory.productValue2).getText().replaceAll("[$, ]", ""); //Get Second Product Price	
+				String prod3 		= (objFactory.productValue3).getText().replaceAll("[$, ]", ""); //Get Third Product Price								
+				String taxAmount 	= objFactory.taxAmount.getText().replaceAll("[$, ]", ""); //Get the Calculated Tax Amount
 				
-				String grandTotal = (objFactory.grandTotalAmount.getText()).replaceAll("[$,]", "");//Get the Grand Total
+				String grandTotal 	= (objFactory.grandTotalAmount.getText()).replaceAll("[$,]", "");//Get the Grand Total
 
-				double prod1TaxVal = calTax(Double.parseDouble(prod1));
-				double prod2TaxVal = calTax(Double.parseDouble(prod2));
-				double prod3TaxVal = calTax(Double.parseDouble(prod3));				
+				double prod1TaxVal 	= calTax(Double.parseDouble(prod1));
+				double prod2TaxVal 	= calTax(Double.parseDouble(prod2));
+				double prod3TaxVal 	= calTax(Double.parseDouble(prod3));				
 				double prodTotalTax = prod1TaxVal + prod2TaxVal + prod3TaxVal;								
-				double prodTotal = Double.parseDouble(prod1) + Double.parseDouble(prod2) + 
-									Double.parseDouble(prod3) + prodTotalTax;
+				double prodTotal 	= Double.parseDouble(prod1) + Double.parseDouble(prod2) + 
+									  Double.parseDouble(prod3) + prodTotalTax;
 				
 				assertThat(Double.parseDouble(grandTotal)).isEqualTo(prodTotal); //Assert Grand Total 
 				

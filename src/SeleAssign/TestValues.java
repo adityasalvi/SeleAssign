@@ -64,10 +64,12 @@ public class TestValues {
 				
 				String grandTotal 	= (objFactory.grandTotalAmount.getText()).replaceAll("[$,]", "");//Get the Grand Total
 
-				double prod1TaxVal 	= calTax(Double.parseDouble(prod1));
-				double prod2TaxVal 	= calTax(Double.parseDouble(prod2));
-				double prod3TaxVal 	= calTax(Double.parseDouble(prod3));				
-				double prodTotalTax = prod1TaxVal + prod2TaxVal + prod3TaxVal;								
+				double prod1TaxVal 	= calTax(Double.parseDouble(prod1)); // Calculate Tax for Product 1
+				double prod2TaxVal 	= calTax(Double.parseDouble(prod2)); // Calculate Tax for Product 2
+				double prod3TaxVal 	= calTax(Double.parseDouble(prod3)); // Calculate Tax for Product 3
+				
+				double prodTotalTax = prod1TaxVal + prod2TaxVal + prod3TaxVal;	
+				
 				double prodTotal 	= Double.parseDouble(prod1) + Double.parseDouble(prod2) + 
 									  Double.parseDouble(prod3) + prodTotalTax;
 				

@@ -32,7 +32,7 @@ public class TestValues {
 		private static String chromeDriverPath = "./chromedriver.exe";
 		
 		/**
-		 * 
+		 * TEST CASE to validate the Total Tax Amount for California and Grand Total for the products purchased.
 		 * @throws Exception
 		 */
 		@Test				

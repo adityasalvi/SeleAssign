@@ -19,6 +19,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * 
  * @author Aditya Salvi
  * @description Build.com Selenium Assignment
+ * NOTE: - To handle the java script validation, i have added a small code which will
+ * 		   quit the execution and will let you enter the CAPTCHA.
+ * 		   Once the validation is passed please restart the script.
  */
 public class TestValues {
 			

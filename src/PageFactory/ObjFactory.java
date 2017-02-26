@@ -23,21 +23,13 @@ public class ObjFactory {
 
     public WebElement searchButton;
     
-    @FindBy(xpath="//*[@id='searchResults']/li[26]/div/div[2]/a")
-    
-    public WebElement getProductURLOne;
-    
-    @FindBy(xpath="//*[@id='page-content']/div[1]/div[1]/div[1]/div[2]/div/a")
+    @FindBy(xpath="//a[contains(@href,'page=cart:cart') and @data-loading-text='Proceeding to Cart...']")
     
     public WebElement proceedTOCart;
     
     @FindBy(xpath="//*[@id='add-to-cart-wrap' and @class='add-to-cart-btn']")
     
     public WebElement addTOCart;
-    
-    @FindBy(xpath="//*[@id='searchResults']/li[1]/div/div[2]/a")
-    
-    public WebElement getProductURLTwo;
     
     @FindBy(xpath="//*[@id='main-product-quantity']/div/input")
     
